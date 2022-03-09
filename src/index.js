@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Users from "./components/UsersComponent"
 
 const rootComponent = document.getElementById('root')
 ReactDOM.render(
-  <div>Olá</div>, rootComponent
+  <Users/>, rootComponent
   );
 
