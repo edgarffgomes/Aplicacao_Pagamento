@@ -1,7 +1,6 @@
 import React from "react"
 import "./User.css"
 const User = ({person})=>{
-	console.log(person)
 	return(
 		<div className="user-container">
 			<div className="user-info">

@@ -4,7 +4,7 @@ const UsersList = ({list})=>{
 	return(
 		<>
 			{list.map((user)=>(
-				<User person={user}/>
+				<User key={user.id} person={user}/>
 				))}
 		</>
 	)
