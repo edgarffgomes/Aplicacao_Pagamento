@@ -1,0 +1,47 @@
+.user-container{
+	min-height: 150px;
+	display: flex;
+	margin: 2px 0px;
+	justify-content: space-between;
+	background: linear-gradient(45deg, #330DB9, #C066C0);
+}
+.profile-pic img{
+	width: 130px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+	border: solid 2px white;
+	border-radius: 50%;
+}
+.user-info{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+}
+.profile-text{
+	display: flex;
+	flex-direction: column;
+	margin-left: 40px;
+	font-size: 1.5em;
+	color: #eee;
+}
+.button-container{
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+}
+.button-container button{
+	background: transparent;
+	height: 80px;
+	width: 80px;
+	color: #eee;
+	border: solid 2px  #eee;
+	border-radius: 30%;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+.button-container button:hover{
+	background: #eee;
+	color: #330DB9;
+}
