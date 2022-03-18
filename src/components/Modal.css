@@ -1,0 +1,74 @@
+.modal{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	top: 0vh;
+	left: 0vh;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	display: flex;
+	height: 30%;
+	width: 35%;
+	background: linear-gradient(45deg, #330DB9, #C066C0);
+	flex-direction: column;
+	border: 1px solid #171110;
+	border-radius: 40px;
+}
+header{
+	display: flex;
+	text-align: center;
+	padding: 15px 0px;
+	background: #171110;
+	width: 100%;
+	height: 50px;
+	font-size: 20px;
+	color: #eee;
+	border-radius: 5px;
+	flex-direction: row;
+	justify-content: center;
+}
+
+header .phrase{
+	font-weight: 700;
+	margin: 0 100px;
+}
+.header-btn{
+	background: transparent;
+	border: none;
+	font-size: 18px;
+	font-weight: bolder;
+	color: #eee;
+	cursor: pointer;
+}
+header .name{
+	color: #330DB9;
+}
+.money{
+	margin-top: 30px;
+}
+.money, .card, .pay-button{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.card, .pay-button{
+	margin-top: 10px;
+}
+.money input, .card select, .pay-button button{
+	border-radius: 5px;
+	height: 30px;
+}
+.money input{
+	width: 50%;
+}
+.card select{
+	width: 28%;
+}
+.pay-button button{
+	width: 20%;
+}

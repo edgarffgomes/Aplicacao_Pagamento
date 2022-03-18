@@ -31,7 +31,7 @@
 	align-items: center;
 	margin-right: 30px;
 }
-.button-container button{
+.button-container .pay-btn{
 	background: transparent;
 	height: 80px;
 	width: 80px;
@@ -41,7 +41,7 @@
 	cursor: pointer;
 	transition: all 0.5s ease;
 }
-.button-container button:hover{
+.button-container .pay-btn:hover{
 	background: #eee;
 	color: #330DB9;
 }

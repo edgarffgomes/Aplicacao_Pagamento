@@ -1,6 +1,9 @@
-import React from "react"
+import React, {useState} from "react"
+import Modal from './Modal'
 import "./User.css"
 const User = ({person})=>{
+	const [isModalVisible, setIsModalVisible] = useState(false)
+	
 	return(
 		<div className="user-container">
 			<div className="user-info">
@@ -9,13 +12,14 @@ const User = ({person})=>{
 				</div>
 
 				<div className="profile-text">
-					<p>Nome do usuário: {person.name}</p>
+					<h3>{person.name}</h3>
 					<p>ID: {person.id} Username: {person.username}</p>
 				</div>
 			</div>
 
 			<div className="button-container">
-				<button>Pagar</button>
+				<button className="pay-btn" onClick={() => setIsModalVisible(true)}>Pagar</button>
+				{isModalVisible ? <Modal onClose = {() => setIsModalVisible(false)}  person ={person}/> : null}
 			</div>
 		</div>
 		)
