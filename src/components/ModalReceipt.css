@@ -1,0 +1,62 @@
+.modalRec{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 12;
+	top: 0vh;
+	left: 0vh;
+	background: rgba(0, 0, 0, 0.9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.containerRec{
+	display: flex;
+	height: 25%;
+	width: 20%;
+	padding: 0px;
+	background: #330DB9;
+	flex-direction: column;
+	border: 1px solid #171110;
+	border-radius: 30px;
+}
+header{
+	display: flex;
+	text-align: center;
+	margin: 0px;
+	padding: 15px 5px;
+	background: #171110;
+	width: 100%;
+	height: 50px;
+	font-size: 18px;
+	color: #330DB9;
+	border-radius: 5px;
+	flex-direction: row;
+	justify-content: center;
+}
+header .header-phrase{
+	font-weight: 400;
+	margin: 0 auto;
+}
+.modalRec-content{
+	padding: 5px;
+	text-align: center;
+	width: 100%;
+	height: 50%;
+	font-size: 30px;
+	color: #eee;
+}
+.close-btn{
+	margin: 0px auto;
+	background: transparent;
+	border: 1px solid #eee;
+	font-size: 16px;
+	font-weight: bolder;
+	color: #eee;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+.close-btn:hover{
+	background: #171110;
+	color: #eee;
+}

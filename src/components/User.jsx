@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import Modal from './Modal'
+import ModalForm from './ModalForm'
 import "./User.css"
 const User = ({person})=>{
 	const [isModalVisible, setIsModalVisible] = useState(false)
@@ -19,7 +19,7 @@ const User = ({person})=>{
 
 			<div className="button-container">
 				<button className="pay-btn" onClick={() => setIsModalVisible(true)}>Pagar</button>
-				{isModalVisible ? <Modal onClose = {() => setIsModalVisible(false)}  person ={person}/> : null}
+				{isModalVisible ? <ModalForm onClose = {() => setIsModalVisible(false)}  person ={person}/> : null}
 			</div>
 		</div>
 		)
