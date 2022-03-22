@@ -3,6 +3,7 @@ import "./ModalForm.css"
 import axios from "axios"
 import ModalReceipt from "./ModalReceipt"
 const ModalForm = ({onClose = () =>{}, person}) =>{
+	let status = true
 	const [isModalRecVisible, setIsModalRecVisible] = useState(false)
 		let cards = [
 		  {
@@ -46,7 +47,14 @@ const ModalForm = ({onClose = () =>{}, person}) =>{
 					value: document.getElementById('payment-money').value
 				}
 				const addPost = axios.post('https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989', data)
-				.then(() => setIsModalRecVisible(true))
+				.then(() => {
+					status = true
+					setIsModalRecVisible(true)
+				})
+				.catch(()=>{
+					status = false
+					setIsModalRecVisible(false)
+					})
 			}
 		}
 	return(
@@ -72,7 +80,7 @@ const ModalForm = ({onClose = () =>{}, person}) =>{
 						</div>
 						<div className="pay-button">
 							<button type="submit" className="btn">Pagar</button>
-							{isModalRecVisible ? <ModalReceipt onClose={() => setIsModalRecVisible(false)}/> : null}
+							{isModalRecVisible ? <ModalReceipt onClose={() => setIsModalRecVisible(false)} status={status}/> : null}
 						</div>
 					</form>
 				</div>

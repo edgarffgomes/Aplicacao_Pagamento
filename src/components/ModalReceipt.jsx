@@ -1,6 +1,13 @@
 import React from "react"
 import "./ModalReceipt.css"
-const ModalReceipt = ({onClose = () =>{}}) =>{
+const ModalReceipt = ({onClose = () =>{}, status}) =>{
+	let cond
+	if(status === true){
+		cond = ''
+	}
+	else{
+		cond = ' não '
+	}
 	return(
 		<div className="modalRec">
 			<div className="containerRec">
@@ -10,7 +17,7 @@ const ModalReceipt = ({onClose = () =>{}}) =>{
 				</header>
 				<div className="modalRec-content">
 					<span>
-						O pagamento foi concluído com sucesso
+						O pagamento {cond} foi concluído com sucesso
 					</span>
 				</div>
 				<button className="close-btn" onClick={onClose}>Fechar</button>
