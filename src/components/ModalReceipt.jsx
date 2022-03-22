@@ -2,6 +2,7 @@ import React from "react"
 import "./ModalReceipt.css"
 const ModalReceipt = ({onClose = () =>{}, status}) =>{
 	let cond
+	//condicional para definir sucesso ou não do pagamento
 	if(status === true){
 		cond = ''
 	}
