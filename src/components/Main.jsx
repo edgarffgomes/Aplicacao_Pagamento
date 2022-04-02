@@ -24,7 +24,9 @@ class Main extends Component{
 	render(){
 		return(
 			<div>
+				{/*Imprimindo header*/}
 				<Header/>
+			{/*Imprimindo lista de usuários*/}
 				<UsersList list= {this.state.data}/>
 			</div>
 		)

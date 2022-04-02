@@ -17,6 +17,7 @@ const ModalForm = ({onClose = () =>{}, person}) =>{
 		    expiry_date: '01/20',
 		  },
 		];
+		/*Máscara para números no input*/
 		function mask(e){
 			var pattern = /[0-9]+/g
 			if(pattern.test(e.key) == false){
@@ -33,6 +34,7 @@ const ModalForm = ({onClose = () =>{}, person}) =>{
 				e.target.value = insert
 			}
 		}
+		/*Testando se a input está vazia, caso não esteja será executado método POST */
 		function testsInputs(e){
 			e.preventDefault()
 			if(document.getElementById('payment-money').value == ''){
