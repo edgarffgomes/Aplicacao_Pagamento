@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import "./ModalForm.css"
 import axios from "axios"
 import ModalReceipt from "./ModalReceipt"
-const ModalForm = ({onClose = () =>{}, person}) =>{
+const ModalForm = ({selectedUSer, setSelectedUser) =>{
 	let status = true
 	const [isModalRecVisible, setIsModalRecVisible] = useState(false)
 		let cards = [
@@ -45,7 +45,7 @@ const ModalForm = ({onClose = () =>{}, person}) =>{
 					card_number: cards[i].card_number,
 					cvv: cards[i].cvv,
 					expiry_date: cards[i].expiry_date,
-					destination_user_id: person.id,
+					//destination_user_id: person.id,
 					value: document.getElementById('payment-money').value
 				}
 				const addPost = axios.post('https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989', data)
@@ -64,9 +64,9 @@ const ModalForm = ({onClose = () =>{}, person}) =>{
 			<div className= "container">
 				<header>
 						 <span className="phrase">
-						 	Pagamento para <span className="name">{person.name}</span>
+						 	Pagamento para <span className="name">{selectedUSer}</span>
 						 </span>
-						 <button className="header-btn" onClick={onClose}>x</button>
+						 <button className="header-btn" onClick={setSelectedUser('')}>x</button>
 				</header>
 				<div>
 					<form onSubmit={(events) => testsInputs(events)}>
