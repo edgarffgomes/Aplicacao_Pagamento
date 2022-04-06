@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import "./ModalForm.css"
 import axios from "axios"
 import ModalReceipt from "./ModalReceipt"
-const ModalForm = ({selectedUSer, setSelectedUser) =>{
+const ModalForm = ({selectedUSer, setSelectedUser}) =>{
 	let status = true
 	const [isModalRecVisible, setIsModalRecVisible] = useState(false)
 		let cards = [
