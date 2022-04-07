@@ -16,7 +16,7 @@ const User = ({person, setSelectedUser}) =>{
 			</div>
 
 			<div className="button-container">
-				<button className="pay-btn" onClick={() => setSelectedUser(person.name)}>Pagar</button>
+				<button className="pay-btn" onClick={() => setSelectedUser(person.username)}>Pagar</button>
 				
 			</div>
 		</div>

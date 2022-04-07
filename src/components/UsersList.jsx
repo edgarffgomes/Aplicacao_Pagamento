@@ -9,7 +9,7 @@ const UsersList = ({list})=>{
 			{list.map((user)=>(
 				<User key={user.id} person={user} setSelectedUser={setSelectedUser}/>
 				))}
-				{ selectedUser ? <ModalForm selectedUser={selectedUser} setSelectedUser={setSelectedUser}/> : null} 
+				{ selectedUser.length ? <ModalForm selectedUser={selectedUser} setSelectedUser={setSelectedUser}/> : null} 
 		</>
 	)
 }
