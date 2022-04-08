@@ -5,8 +5,9 @@ import UsersList from "./UsersList"
 
 const Main = () =>{
 
-	//declarando variável data que irá receber os dados da api
+	//declarando state, que irá receber os dados da api
 	const [state, setState] = useState([])
+	//declarando selectedUser, que irá receber o nome do usuário selecionado
 	const [selectedUser, setSelectedUser] = useState('')
 	//realizando requisição da api de forma assíncrona
 	async function requestAPI(){
@@ -15,7 +16,6 @@ const Main = () =>{
 
 		const body = await response.json()
 
-		console.log(body)
 		setState(body)
 	}
 	
@@ -25,7 +25,7 @@ const Main = () =>{
 				{/*Imprimindo header*/}
 				<Header/>
 			{/*Imprimindo lista de usuários*/}
-				<UsersList list= {state}/>
+				<UsersList list= {state} selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>
 			</div>
 			)
 }

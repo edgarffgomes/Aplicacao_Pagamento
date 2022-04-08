@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import ModalForm from './ModalForm'
 import "./User.css"
-const User = ({person, setSelectedUser}) =>{
+const User = ({person, setSelectedUser = () =>{}}) =>{
 	return(
 		<div className="user-container">
 			<div className="user-info">
