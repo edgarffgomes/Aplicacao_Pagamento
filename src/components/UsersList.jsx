@@ -8,8 +8,8 @@ const UsersList = ({list})=>{
 			{/*Mapeando lista de usuários e chamando componente para imprimí-los na tela*/}
 			{list.map((user)=>(
 				<User key={user.id} person={user} setSelectedUser={setSelectedUser}/>
-				))}
-				{ selectedUser.length ? <ModalForm selectedUser={selectedUser} setSelectedUser={setSelectedUser}/> : null} 
+			))}
+			{selectedUser.length && <ModalForm selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>} 
 		</>
 	)
 }

@@ -1,35 +1,32 @@
-import React, {Component} from "react"
+import React, {useState} from "react"
 import Header from "./Header"
 import "./Main.css"
 import UsersList from "./UsersList"
 
-class Main extends Component{
+const Main = () =>{
 
 	//declarando variável data que irá receber os dados da api
-	state = {
-		data: []
-	}
-
+	const [state, setState] = useState([])
+	const [selectedUser, setSelectedUser] = useState('')
 	//realizando requisição da api de forma assíncrona
-	async componentDidMount(){
+	async function requestAPI(){
 		const api = 'https://www.mocky.io/v2/5d531c4f2e0000620081ddce'
 		const response = await fetch(api)
 
 		const body = await response.json()
 
-
-		this.setState({data: body})
+		console.log(body)
+		setState(body)
 	}
 	
-	render(){
+	requestAPI()
 		return(
 			<div>
 				{/*Imprimindo header*/}
 				<Header/>
 			{/*Imprimindo lista de usuários*/}
-				<UsersList list= {this.state.data}/>
+				<UsersList list= {state}/>
 			</div>
-		)
-	}
+			)
 }
 export default Main
