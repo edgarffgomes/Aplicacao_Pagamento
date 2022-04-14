@@ -27,7 +27,8 @@ const Main = () =>{
 				<Header/>
 			{/*Imprimindo lista de usuários*/}
 				<UsersList list= {state} selectedUser={selectedUser} setSelectedUser={setSelectedUser} setSelectedId={setSelectedId}/>
-				{ selectedUser && <ModalForm selectedUser={selectedUser} setSelectedUser={setSelectedUser} setSelectedId={setSelectedId} setSelectedId={setSelectedId}/>} 
+			{/*Imprimindo o Modal do formulário ao setar um usuário*/}
+				{ selectedUser && <ModalForm selectedUser={selectedUser} setSelectedUser={setSelectedUser} selectedId={selectedId} setSelectedId={setSelectedId}/>} 
 
 			</div>
 			)

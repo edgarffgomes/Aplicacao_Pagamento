@@ -52,12 +52,21 @@ const ModalForm = ({selectedUser, setSelectedUser = () => {}, selectedId, setSel
 				.then(() => {
 					status = true
 					setIsModalRecVisible(true)
+					//fechando os modais após 5 segundos
+					setTimeout(() => setIsModalRecVisible(false), 4000)
+					setTimeout(() =>setSelectedUser(''), 4000)
+					setTimeout(() =>setSelectedId(''), 4000)
+
 				})
 				.catch(()=>{
 					status = false
 					setIsModalRecVisible(true)
 					})
 			}
+		}
+		function setDataClose(){
+			setSelectedUser('')
+			setSelectedId('')
 		}
 	return(
 		<div className="modal">
@@ -66,7 +75,7 @@ const ModalForm = ({selectedUser, setSelectedUser = () => {}, selectedId, setSel
 						 <span className="phrase">
 						 	Pagamento para <span className="name">{selectedUser}</span>
 						 </span>
-						 <button className="header-btn" onClick={() => setSelectedUser('') && setSelectedId('')}>x</button>
+						 <button className="header-btn" onClick={() => setDataClose()}>x</button>
 				</header>
 				<div>
 					<form onSubmit={(events) => testsInputs(events)}>

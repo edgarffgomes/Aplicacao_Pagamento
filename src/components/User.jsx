@@ -1,6 +1,10 @@
 import React from "react"
 import "./User.css"
 const User = ({person, setSelectedUser = () =>{}, setSelectedId = () =>{}}) =>{
+	function setData(){
+		setSelectedId(person.id)
+		setSelectedUser(person.name)
+	}
 	return(
 		<div className="user-container">
 			<div className="user-info">
@@ -15,7 +19,8 @@ const User = ({person, setSelectedUser = () =>{}, setSelectedId = () =>{}}) =>{
 			</div>
 
 			<div className="button-container">
-				<button className="pay-btn" onClick={() => setSelectedUser(person.name) && setSelectedId(person.id)}>Pagar</button>
+				{/*Setando dados que serão utilizados no Form após evento de click*/}
+				<button className="pay-btn" onClick={() => setData()}>Pagar</button>
 				
 			</div>
 		</div>
