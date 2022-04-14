@@ -37,6 +37,7 @@ header{
 header .phrase{
 	font-weight: 700;
 	margin: 0 100px;
+	color:  #eee;
 }
 .header-btn{
 	background: transparent;

@@ -1,7 +1,6 @@
-import React, {useState} from "react"
-import ModalForm from './ModalForm'
+import React from "react"
 import "./User.css"
-const User = ({person, setSelectedUser = () =>{}}) =>{
+const User = ({person, setSelectedUser = () =>{}, setSelectedId = () =>{}}) =>{
 	return(
 		<div className="user-container">
 			<div className="user-info">
@@ -16,7 +15,7 @@ const User = ({person, setSelectedUser = () =>{}}) =>{
 			</div>
 
 			<div className="button-container">
-				<button className="pay-btn" onClick={() => setSelectedUser(person.username)}>Pagar</button>
+				<button className="pay-btn" onClick={() => setSelectedUser(person.name) && setSelectedId(person.id)}>Pagar</button>
 				
 			</div>
 		</div>
