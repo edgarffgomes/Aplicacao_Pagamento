@@ -21,7 +21,6 @@ const User = ({person, setSelectedUser = () =>{}, setSelectedId = () =>{}}) =>{
 			<div className="button-container">
 				{/*Setando dados que serão utilizados no Form após evento de click*/}
 				<button className="pay-btn" onClick={() => setData()}>Pagar</button>
-				
 			</div>
 		</div>
 		)
