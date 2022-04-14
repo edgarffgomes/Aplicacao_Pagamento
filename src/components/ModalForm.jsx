@@ -40,7 +40,7 @@ const ModalForm = ({selectedUser, setSelectedUser = () => {}, selectedId, setSel
 			if(document.getElementById('payment-money').value == ''){
 				alert('Insira algum valor para o pagamento')
 			} else{
-				 let i = document.getElementById('payment-card').value
+				let i = document.getElementById('payment-card').value
 				let data = {
 					card_number: cards[i].card_number,
 					cvv: cards[i].cvv,
