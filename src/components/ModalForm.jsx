@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import "./ModalForm.css"
 import axios from "axios"
+import CurrencyInput from "react-currency-masked-input"
 import ModalReceipt from "./ModalReceipt"
 const ModalForm = ({selectedUser, setSelectedUser = () => {}, selectedId, setSelectedId = () =>{}}) =>{
 	let status = true
@@ -17,23 +18,7 @@ const ModalForm = ({selectedUser, setSelectedUser = () => {}, selectedId, setSel
 		    xpiry_date: '01/20',
 		 },
 	];
-	/*Máscara para números no input*/
-	function mask(e){
-		var pattern = /[0-9]+/g
-		if(pattern.test(e.key) == false){
-			e.preventDefault()
-			return
-		}
-		if(e.target.value.length == 0){
-			var insert = (e.target.value/10).toFixed(1)
-			e.target.value = insert.replace('.',',')
-		} else{
-			var insert = e.target.value.replace(',','.')
-			insert = (parseFloat(insert) * 10).toFixed(1)
-			insert = insert.replace('.',',')		
-			e.target.value = insert
-		}
-	}
+	
 	/*Testando se a input está vazia, caso não esteja será executado método POST */
 	function testsInputs(e){
 		e.preventDefault()
@@ -80,7 +65,7 @@ const ModalForm = ({selectedUser, setSelectedUser = () => {}, selectedId, setSel
 				<div>
 					<form onSubmit={(events) => testsInputs(events)}>
 						<div className="money">
-							<input id="payment-money" onKeyPress={(event) => mask(event)} type="text" placeholder="R$ 0,00"/>
+							<CurrencyInput name="money" placeholder="R$ 0,00"/>
 						</div>
 						<div className ="card">
 								<select id="payment-card">
