@@ -23,5 +23,6 @@
 </table>
 
 ## Link de acesso:
+https://edgarffgomes.github.io/projeto_react_newtab/
 
 
