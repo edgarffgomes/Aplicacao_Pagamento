@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Aplicacao_Pagamento/static/css/main.7f7e9f8e.css",
+    "main.js": "/Aplicacao_Pagamento/static/js/main.647eca6a.js",
+    "index.html": "/Aplicacao_Pagamento/index.html",
+    "main.7f7e9f8e.css.map": "/Aplicacao_Pagamento/static/css/main.7f7e9f8e.css.map",
+    "main.647eca6a.js.map": "/Aplicacao_Pagamento/static/js/main.647eca6a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f7e9f8e.css",
+    "static/js/main.647eca6a.js"
+  ]
+}
