@@ -9,7 +9,7 @@ const User = ({person, setSelectedUser = () =>{}, setSelectedId = () =>{}}) =>{
 		<div className="user-container">
 			<div className="user-info">
 				<div className="profile-pic">
-					<img src={person.img}/>
+					<img src={person.img} alt="Imagem de perfil"/>
 				</div>
 
 				<div className="profile-text">

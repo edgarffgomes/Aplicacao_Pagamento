@@ -18,11 +18,11 @@ const ModalForm = ({selectedUser, setSelectedUser = () => {}, selectedId, setSel
 		    xpiry_date: '01/20',
 		 },
 	];
-	
+
 	/*Testando se a input está vazia, caso não esteja será executado método POST */
 	function testsInputs(e){
 		e.preventDefault()
-		if(document.getElementById('payment-money').value == ''){
+		if(document.getElementById('payment-money').value === ''){
 			alert('Insira algum valor para o pagamento')
 		} else{
 			let i = document.getElementById('payment-card').value
@@ -65,7 +65,7 @@ const ModalForm = ({selectedUser, setSelectedUser = () => {}, selectedId, setSel
 				<div>
 					<form onSubmit={(events) => testsInputs(events)}>
 						<div className="money">
-							<CurrencyInput name="money" placeholder="R$ 0,00"/>
+							<CurrencyInput id="payment-money" name="money" placeholder="R$ 0,00"/>
 						</div>
 						<div className ="card">
 								<select id="payment-card">
